@@ -7,6 +7,7 @@ const ball02 = document.getElementById(`ball-02`);
 const winCoutner = document.getElementById(`win-counter`);
 const lossCounter = document.getElementById(`loss-counter`);
 const totalCounter = document.getElementById(`total-counter`);
+const resetGame = document.getElementById(`reset-game`);
 
 let wins = 0;
 let total = 0;
@@ -88,3 +89,11 @@ function winLoss(userGuess, position){
     totalCounter.textContent = total;
     lossCounter.textContent = total - wins;
 }
+
+resetGame.addEventListener(`click`, () => {
+    wins = 0;
+    total = 0;
+    winCoutner.textContent = wins;
+    totalCounter.textContent = total;
+    lossCounter.textContent = total - wins;
+});

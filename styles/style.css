@@ -7,6 +7,7 @@
 
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --shadow-foot: 0px -10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
 
@@ -22,6 +23,7 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    padding-right: 10px;
 }
 
 header img {
@@ -29,7 +31,6 @@ header img {
 }
 
 main {
-    padding-top: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -121,9 +122,27 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     padding-top: 5px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 20px 3px rgba(0,0,0,0.45);
+    padding-right: 10px;
 }
 
 .visibility{
     visibility: hidden;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    z-index: 100;
+}
+
+#reset-game{
+    margin-top: 20px;
 }
