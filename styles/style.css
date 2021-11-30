@@ -24,6 +24,7 @@ header {
     height: var(--header-height);
     box-shadow: var(--shadow);
     padding-right: 10px;
+    z-index: 100;
 }
 
 header img {
@@ -38,11 +39,13 @@ main {
     align-items: center;
     margin-bottom: calc(var(--footer-height));
     background-color: var(--orange);
+    position: relative;
 }
 
 section{
     width: 500px;
     padding: 20px;
+    margin-top: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,7 +125,7 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     padding-top: 5px;
-    box-shadow: 0 0 20px 3px rgba(0,0,0,0.45);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.45);
     padding-right: 10px;
 }
 
@@ -131,15 +134,18 @@ footer {
 }
 
 h1{
+    position: absolute;
     margin: 0;
     padding: 0;
     z-index: 100;
+    top: 150px;
 }
 
 h3{
+    position: absolute;
+    top: 195px;
     margin: 0;
     padding: 0;
-    margin-bottom: 50px;
     z-index: 100;
 }
 

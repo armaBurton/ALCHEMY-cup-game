@@ -21,6 +21,10 @@ cup00.addEventListener('click', () =>{
     ball00.classList.add(`move-ball`);
     winLoss(userGuess, position);
     setTimeout(resetPos, 500);
+    if (userGuess !== position){
+        setTimeout(showHidingSpot, 750);
+        setTimeout(resetPos, 1500);
+    }
 });
 
 cup01.addEventListener('click', () =>{
@@ -32,6 +36,10 @@ cup01.addEventListener('click', () =>{
     ball01.classList.add(`move-ball`);
     winLoss(userGuess, position);
     setTimeout(resetPos, 500);
+    if (userGuess !== position){
+        setTimeout(showHidingSpot, 750);
+        setTimeout(resetPos, 1500);
+    }
 });
 
 cup02.addEventListener('click', () =>{
@@ -43,6 +51,10 @@ cup02.addEventListener('click', () =>{
     ball02.classList.add(`move-ball`);
     winLoss(userGuess, position);
     setTimeout(resetPos, 500);
+    if (userGuess !== position){
+        setTimeout(showHidingSpot, 750);
+        setTimeout(resetPos, 1500);
+    }
 });
 
 function getRandomNumber(){
@@ -97,3 +109,12 @@ resetGame.addEventListener(`click`, () => {
     totalCounter.textContent = total;
     lossCounter.textContent = total - wins;
 });
+
+function showHidingSpot(){
+    cup00.classList.add(`move-cup`);
+    cup01.classList.add(`move-cup`);
+    cup02.classList.add(`move-cup`);
+    ball00.classList.add(`move-ball`);
+    ball01.classList.add(`move-ball`);
+    ball02.classList.add(`move-ball`);
+}
