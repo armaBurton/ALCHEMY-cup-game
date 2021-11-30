@@ -20,11 +20,7 @@ cup00.addEventListener('click', () =>{
     chooseCorrectBall(position);
     ball00.classList.add(`move-ball`);
     winLoss(userGuess, position);
-    setTimeout(resetPos, 500);
-    if (userGuess !== position){
-        setTimeout(showHidingSpot, 750);
-        setTimeout(resetPos, 1500);
-    }
+    animate(userGuess, position);
 });
 
 cup01.addEventListener('click', () =>{
@@ -35,11 +31,7 @@ cup01.addEventListener('click', () =>{
     chooseCorrectBall(position);
     ball01.classList.add(`move-ball`);
     winLoss(userGuess, position);
-    setTimeout(resetPos, 500);
-    if (userGuess !== position){
-        setTimeout(showHidingSpot, 750);
-        setTimeout(resetPos, 1500);
-    }
+    animate(userGuess, position);
 });
 
 cup02.addEventListener('click', () =>{
@@ -50,12 +42,16 @@ cup02.addEventListener('click', () =>{
     chooseCorrectBall(position);
     ball02.classList.add(`move-ball`);
     winLoss(userGuess, position);
+    animate(userGuess, position);
+});
+
+function animate(userGuess, position){
     setTimeout(resetPos, 500);
     if (userGuess !== position){
         setTimeout(showHidingSpot, 750);
         setTimeout(resetPos, 1500);
     }
-});
+}
 
 function getRandomNumber(){
     return Math.floor(Math.random() * 3);
