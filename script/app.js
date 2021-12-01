@@ -12,9 +12,15 @@ const resetGame = document.getElementById(`reset-game`);
 let wins = 0;
 let total = 0;
 
+const arr = [
+    `cup00`,
+    `cup01`,
+    `cup02`
+];
+
 cup00.addEventListener('click', () =>{
-    let userGuess = 0;
-    let position = getRandomNumber();
+    let userGuess = `cup00`;
+    let position = getRandomItem(arr);
     resetPos();
     cup00.classList.add(`move-cup`);
     chooseCorrectBall(position);
@@ -24,8 +30,8 @@ cup00.addEventListener('click', () =>{
 });
 
 cup01.addEventListener('click', () =>{
-    let userGuess = 1;
-    let position = getRandomNumber();
+    let userGuess = `cup01`;
+    let position = getRandomItem(arr);
     resetPos();
     cup01.classList.add(`move-cup`);
     chooseCorrectBall(position);
@@ -35,8 +41,8 @@ cup01.addEventListener('click', () =>{
 });
 
 cup02.addEventListener('click', () =>{
-    let userGuess = 2;
-    let position = getRandomNumber();
+    let userGuess = `cup02`;
+    let position = getRandomItem(arr);
     resetPos();
     cup02.classList.add(`move-cup`);
     chooseCorrectBall(position);
@@ -53,8 +59,9 @@ function animate(userGuess, position){
     }
 }
 
-function getRandomNumber(){
-    return Math.floor(Math.random() * 3);
+function getRandomItem(arr){
+    let index = Math.floor(Math.random() * 3);
+    return arr[index];
 }
 
 function resetPos(){
@@ -70,13 +77,13 @@ function chooseCorrectBall(position){
     resetVisiblity();
 
     switch (position){
-        case 0:
+        case 'cup00':
             ball00.classList.remove(`visibility`);
             break;
-        case 1:
+        case 'cup01':
             ball01.classList.remove(`visibility`);
             break;
-        case 2:
+        case 'cup02':
             ball02.classList.remove(`visibility`);
             break;   
     }
